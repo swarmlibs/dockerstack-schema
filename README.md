@@ -7,7 +7,7 @@ The unofficial JSON Schema for Docker Stack files. A modification of the [compos
 Add the following line to your `docker-stack.yml` or `docker-compose.yml` file:
 
 ```yaml
-# yaml-language-server: $schema=https://raw.githubusercontent.com/swarmlibs/docker-stack-schema/main/docker-stack-spec.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/swarmlibs/dockerstack-schema/main/dockerstack-spec.json
 
 services:
   my-service:
