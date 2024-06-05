@@ -91,54 +91,6 @@
                 "configs": {
                     "$ref": "#/definitions/service_config_or_secret"
                 },
-                "cpu_count": {
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "cpu_percent": {
-                    "type": "integer",
-                    "minimum": 0,
-                    "maximum": 100
-                },
-                "cpu_shares": {
-                    "type": [
-                        "number",
-                        "string"
-                    ]
-                },
-                "cpu_quota": {
-                    "type": [
-                        "number",
-                        "string"
-                    ]
-                },
-                "cpu_period": {
-                    "type": [
-                        "number",
-                        "string"
-                    ]
-                },
-                "cpu_rt_period": {
-                    "type": [
-                        "number",
-                        "string"
-                    ]
-                },
-                "cpu_rt_runtime": {
-                    "type": [
-                        "number",
-                        "string"
-                    ]
-                },
-                "cpus": {
-                    "type": [
-                        "number",
-                        "string"
-                    ]
-                },
-                "cpuset": {
-                    "type": "string"
-                },
                 "credential_spec": {
                     "type": "object",
                     "properties": {
@@ -196,40 +148,8 @@
                     },
                     "uniqueItems": true
                 },
-                "extends": {
-                    "oneOf": [
-                        {
-                            "type": "string"
-                        },
-                        {
-                            "type": "object",
-                            "properties": {
-                                "service": {
-                                    "type": "string"
-                                },
-                                "file": {
-                                    "type": "string"
-                                }
-                            },
-                            "required": [
-                                "service"
-                            ],
-                            "additionalProperties": false
-                        }
-                    ]
-                },
                 "extra_hosts": {
                     "$ref": "#/definitions/list_or_dict"
-                },
-                "group_add": {
-                    "type": "array",
-                    "items": {
-                        "type": [
-                            "string",
-                            "number"
-                        ]
-                    },
-                    "uniqueItems": true
                 },
                 "healthcheck": {
                     "$ref": "#/definitions/healthcheck"
@@ -285,27 +205,6 @@
                 },
                 "mac_address": {
                     "type": "string"
-                },
-                "mem_limit": {
-                    "type": [
-                        "number",
-                        "string"
-                    ]
-                },
-                "mem_reservation": {
-                    "type": [
-                        "string",
-                        "integer"
-                    ]
-                },
-                "mem_swappiness": {
-                    "type": "integer"
-                },
-                "memswap_limit": {
-                    "type": [
-                        "number",
-                        "string"
-                    ]
                 },
                 "networks": {
                     "oneOf": [
@@ -365,24 +264,10 @@
                         }
                     ]
                 },
-                "oom_kill_disable": {
-                    "type": "boolean"
-                },
-                "oom_score_adj": {
-                    "type": "integer",
-                    "minimum": -1000,
-                    "maximum": 1000
-                },
                 "pid": {
                     "type": [
                         "string",
                         "null"
-                    ]
-                },
-                "pids_limit": {
-                    "type": [
-                        "number",
-                        "string"
                     ]
                 },
                 "platform": {
@@ -451,12 +336,6 @@
                 },
                 "read_only": {
                     "type": "boolean"
-                },
-                "runtime": {
-                    "type": "string"
-                },
-                "scale": {
-                    "type": "integer"
                 },
                 "shm_size": {
                     "type": [
