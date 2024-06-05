@@ -680,7 +680,7 @@
                     "type": "string"
                 },
                 "replicas": {
-                    "type": "integer"
+                    "type": ["string", "integer"]
                 },
                 "labels": {
                     "$ref": "#/definitions/list_or_dict"
