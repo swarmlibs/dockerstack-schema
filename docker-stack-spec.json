@@ -452,16 +452,12 @@
                 "privileged": {
                     "type": "boolean"
                 },
-                "profiles": {
-                    "$ref": "#/definitions/list_of_strings"
-                },
                 "pull_policy": {
                     "type": "string",
                     "enum": [
                         "always",
                         "never",
                         "if_not_present",
-                        "build",
                         "missing"
                     ]
                 },
@@ -668,51 +664,6 @@
             "additionalProperties": false,
             "patternProperties": {
                 "^x-": {}
-            }
-        },
-        "development": {
-            "id": "#/definitions/development",
-            "type": [
-                "object",
-                "null"
-            ],
-            "properties": {
-                "watch": {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "required": [
-                            "path",
-                            "action"
-                        ],
-                        "properties": {
-                            "ignore": {
-                                "type": "array",
-                                "items": {
-                                    "type": "string"
-                                }
-                            },
-                            "path": {
-                                "type": "string"
-                            },
-                            "action": {
-                                "type": "string",
-                                "enum": [
-                                    "rebuild",
-                                    "sync",
-                                    "sync+restart"
-                                ]
-                            },
-                            "target": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    "additionalProperties": false,
-                    "patternProperties": {
-                        "^x-": {}
-                    }
-                }
             }
         },
         "deployment": {
@@ -936,37 +887,6 @@
                         "patternProperties": {
                             "^x-": {}
                         }
-                    }
-                },
-                "additionalProperties": false,
-                "patternProperties": {
-                    "^x-": {}
-                }
-            }
-        },
-        "devices": {
-            "id": "#/definitions/devices",
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "capabilities": {
-                        "$ref": "#/definitions/list_of_strings"
-                    },
-                    "count": {
-                        "type": [
-                            "string",
-                            "integer"
-                        ]
-                    },
-                    "device_ids": {
-                        "$ref": "#/definitions/list_of_strings"
-                    },
-                    "driver": {
-                        "type": "string"
-                    },
-                    "options": {
-                        "$ref": "#/definitions/list_or_dict"
                     }
                 },
                 "additionalProperties": false,
@@ -1433,25 +1353,9 @@
         "constraints": {
             "service": {
                 "id": "#/definitions/constraints/service",
-                "anyOf": [
-                    {
-                        "required": [
-                            "build"
-                        ]
-                    },
-                    {
-                        "required": [
-                            "image"
-                        ]
-                    }
-                ],
-                "properties": {
-                    "build": {
-                        "required": [
-                            "context"
-                        ]
-                    }
-                }
+                "required": [
+                    "image"
+                ]
             }
         }
     }
