@@ -9,11 +9,6 @@
             "type": "string",
             "description": "declared for backward compatibility, ignored."
         },
-        "name": {
-            "type": "string",
-            "pattern": "^[a-z0-9][a-z0-9_-]*$",
-            "description": "define the Compose project name, until user defines one explicitly."
-        },
         "services": {
             "id": "#/properties/services",
             "type": "object",
