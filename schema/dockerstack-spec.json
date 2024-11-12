@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2019-09/schema#",
-    "id": "docker-stack-spec.json",
+    "id": "dockerstack-spec.json",
     "type": "object",
     "title": "Docker Stack Specification",
     "description": "The Docker Stack file is a YAML file defining a multi-containers based application.",
